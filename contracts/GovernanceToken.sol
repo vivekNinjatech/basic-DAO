@@ -1,15 +1,37 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.8;
+pragma solidity ^0.8.2;
 
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol"; // Missing import fixed
+import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Votes.sol";
+import "@openzeppelin/contracts/token/ERC20/extensions/draft-ERC20Permit.sol";
 
-contract GovernanceToken is ERC20Permit {
-    uint256 public maxSupply = 1_000_000 * 10**18; // More readable format
+contract GovernanceToken is ERC20Votes {
+    uint256 public s_maxSupply = 1000000000000000000000000;
 
-    constructor() 
-    ERC20("Governance Token", "GOV")
-    ERC20Permit("Governance Token") // Ensure this matches ERC20 name
+    constructor()
+        ERC20("GovernanceToken", "GT")
+        ERC20Permit("GovernanceToken")
     {
-        _mint(msg.sender, maxSupply);
+        _mint(msg.sender, s_maxSupply);
+    }
+
+    // The functions below are overrides required by Solidity.
+
+    function _afterTokenTransfer(
+        address from,
+        address to,
+        uint256 amount
+    ) internal override(ERC20Votes) {
+        super._afterTokenTransfer(from, to, amount);
+    }
+
+    function _mint(address to, uint256 amount) internal override(ERC20Votes) {
+        super._mint(to, amount);
+    }
+
+    function _burn(address account, uint256 amount)
+        internal
+        override(ERC20Votes)
+    {
+        super._burn(account, amount);
     }
 }

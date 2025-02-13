@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/home/vivek/Documents/Work/DAO/basic-DAO/contracts/box.sol": {
-      "lastModificationDate": 1739443743565,
-      "contentHash": "0eaa191ee3e6cdf1a17794f774072fbb",
+      "lastModificationDate": 1739453082843,
+      "contentHash": "6f87016156c58340e7c4704268905688",
       "sourceName": "contracts/box.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -40,8 +40,8 @@
       ]
     },
     "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
-      "lastModificationDate": 1739443515432,
-      "contentHash": "d3c790edc9ccf808a17c5a6cd13614fd",
+      "lastModificationDate": 1739453024536,
+      "contentHash": "5a20b2cad87ddb61c7a3a6af21289e28",
       "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -71,15 +71,15 @@
         "../utils/Context.sol"
       ],
       "versionPragmas": [
-        "^0.8.20"
+        "^0.8.0"
       ],
       "artifacts": [
         "Ownable"
       ]
     },
     "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/utils/Context.sol": {
-      "lastModificationDate": 1739443515432,
-      "contentHash": "67bfbc07588eb8683b3fd8f6f909563e",
+      "lastModificationDate": 1739453024513,
+      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
       "sourceName": "@openzeppelin/contracts/utils/Context.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -107,15 +107,15 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.8.20"
+        "^0.8.0"
       ],
       "artifacts": [
         "Context"
       ]
     },
     "/home/vivek/Documents/Work/DAO/basic-DAO/contracts/GovernanceToken.sol": {
-      "lastModificationDate": 1739448068146,
-      "contentHash": "6d333ba5a856b5564c04f9ce954cf30f",
+      "lastModificationDate": 1739453063299,
+      "contentHash": "ab925429fcddb71bed79b0563ffb2387",
       "sourceName": "contracts/GovernanceToken.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -142,18 +142,19 @@
         }
       },
       "imports": [
-        "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol"
+        "@openzeppelin/contracts/token/ERC20/extensions/ERC20Votes.sol",
+        "@openzeppelin/contracts/token/ERC20/extensions/draft-ERC20Permit.sol"
       ],
       "versionPragmas": [
-        "^0.8.8"
+        "^0.8.2"
       ],
       "artifacts": [
         "GovernanceToken"
       ]
     },
     "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol": {
-      "lastModificationDate": 1739443515449,
-      "contentHash": "b1a8fc63b83ce00408e0c9ed1230b717",
+      "lastModificationDate": 1739453024520,
+      "contentHash": "c8946432e6d37418cb12a15668e3c0cd",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -184,54 +185,18 @@
         "../ERC20.sol",
         "../../../utils/cryptography/ECDSA.sol",
         "../../../utils/cryptography/EIP712.sol",
-        "../../../utils/Nonces.sol"
+        "../../../utils/Counters.sol"
       ],
       "versionPragmas": [
-        "^0.8.20"
+        "^0.8.0"
       ],
       "artifacts": [
         "ERC20Permit"
       ]
     },
-    "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/utils/Nonces.sol": {
-      "lastModificationDate": 1739443515432,
-      "contentHash": "c32d108058718efb9061b88e83a83f79",
-      "sourceName": "@openzeppelin/contracts/utils/Nonces.sol",
-      "solcConfig": {
-        "version": "0.8.28",
-        "settings": {
-          "evmVersion": "paris",
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "Nonces"
-      ]
-    },
     "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol": {
-      "lastModificationDate": 1739443515449,
-      "contentHash": "81de029d56aa803972be03c5d277cb6c",
+      "lastModificationDate": 1739453024516,
+      "contentHash": "d822a8a9468649cab463f29f5decf5cc",
       "sourceName": "@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -257,17 +222,19 @@
           }
         }
       },
-      "imports": [],
+      "imports": [
+        "../Strings.sol"
+      ],
       "versionPragmas": [
-        "^0.8.20"
+        "^0.8.0"
       ],
       "artifacts": [
         "ECDSA"
       ]
     },
     "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/utils/cryptography/EIP712.sol": {
-      "lastModificationDate": 1739443515449,
-      "contentHash": "8dbb261c55f358342798c4d1803d4f8e",
+      "lastModificationDate": 1739453024516,
+      "contentHash": "459aeb9cc3fc3c6d67d30ffefb724aba",
       "sourceName": "@openzeppelin/contracts/utils/cryptography/EIP712.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -294,20 +261,20 @@
         }
       },
       "imports": [
-        "./MessageHashUtils.sol",
+        "./ECDSA.sol",
         "../ShortStrings.sol",
         "../../interfaces/IERC5267.sol"
       ],
       "versionPragmas": [
-        "^0.8.20"
+        "^0.8.8"
       ],
       "artifacts": [
         "EIP712"
       ]
     },
     "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
-      "lastModificationDate": 1739443515449,
-      "contentHash": "227a6eb2225701c12d9c959b758b6333",
+      "lastModificationDate": 1739453024519,
+      "contentHash": "3ae5166c6827a9cf1a7a462d1632b464",
       "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -336,19 +303,18 @@
       "imports": [
         "./IERC20.sol",
         "./extensions/IERC20Metadata.sol",
-        "../../utils/Context.sol",
-        "../../interfaces/draft-IERC6093.sol"
+        "../../utils/Context.sol"
       ],
       "versionPragmas": [
-        "^0.8.20"
+        "^0.8.0"
       ],
       "artifacts": [
         "ERC20"
       ]
     },
     "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol": {
-      "lastModificationDate": 1739443515449,
-      "contentHash": "94ec15baf0d5df863f45b8f351937ec7",
+      "lastModificationDate": 1739453024531,
+      "contentHash": "aa849939a4ae83a4dcb2dca9b3e9e707",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -376,15 +342,15 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.8.20"
+        "^0.8.0"
       ],
       "artifacts": [
         "IERC20Permit"
       ]
     },
     "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/interfaces/IERC5267.sol": {
-      "lastModificationDate": 1739443515432,
-      "contentHash": "94364524cb1a39dcbc3d3afff6d8e53e",
+      "lastModificationDate": 1739453024531,
+      "contentHash": "b1756048024350a162c3be27c04aa652",
       "sourceName": "@openzeppelin/contracts/interfaces/IERC5267.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -412,15 +378,15 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.8.20"
+        "^0.8.0"
       ],
       "artifacts": [
         "IERC5267"
       ]
     },
     "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/utils/ShortStrings.sol": {
-      "lastModificationDate": 1739443515432,
-      "contentHash": "94e7feaf138d08fb736e43ca0be9bf26",
+      "lastModificationDate": 1739453024538,
+      "contentHash": "8dde288da49722a70f34ee369be4bfba",
       "sourceName": "@openzeppelin/contracts/utils/ShortStrings.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -450,53 +416,15 @@
         "./StorageSlot.sol"
       ],
       "versionPragmas": [
-        "^0.8.20"
+        "^0.8.8"
       ],
       "artifacts": [
         "ShortStrings"
       ]
     },
-    "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol": {
-      "lastModificationDate": 1739443515449,
-      "contentHash": "86fd93657e4e27ff76c38699e9b9fcef",
-      "sourceName": "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol",
-      "solcConfig": {
-        "version": "0.8.28",
-        "settings": {
-          "evmVersion": "paris",
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../Strings.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "MessageHashUtils"
-      ]
-    },
     "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/utils/StorageSlot.sol": {
-      "lastModificationDate": 1739443515432,
-      "contentHash": "e656d64c4ce918f3d13030b91c935134",
+      "lastModificationDate": 1739453024539,
+      "contentHash": "682f7dd1f2e1147c8390e7575deceb2d",
       "sourceName": "@openzeppelin/contracts/utils/StorageSlot.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -524,15 +452,15 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.8.20"
+        "^0.8.0"
       ],
       "artifacts": [
         "StorageSlot"
       ]
     },
     "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
-      "lastModificationDate": 1739443515432,
-      "contentHash": "a55fef2557b35bac18a1880d3c2e6740",
+      "lastModificationDate": 1739453024539,
+      "contentHash": "48686fc32a22a3754b8e63321857dd2a",
       "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -560,19 +488,18 @@
       },
       "imports": [
         "./math/Math.sol",
-        "./math/SafeCast.sol",
         "./math/SignedMath.sol"
       ],
       "versionPragmas": [
-        "^0.8.20"
+        "^0.8.0"
       ],
       "artifacts": [
         "Strings"
       ]
     },
     "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/utils/math/SignedMath.sol": {
-      "lastModificationDate": 1739443515449,
-      "contentHash": "ae3528afb8bdb0a7dcfba5b115ee8074",
+      "lastModificationDate": 1739453024538,
+      "contentHash": "9488ebd4daacfee8ad04811600d7d061",
       "sourceName": "@openzeppelin/contracts/utils/math/SignedMath.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -598,19 +525,17 @@
           }
         }
       },
-      "imports": [
-        "./SafeCast.sol"
-      ],
+      "imports": [],
       "versionPragmas": [
-        "^0.8.20"
+        "^0.8.0"
       ],
       "artifacts": [
         "SignedMath"
       ]
     },
     "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/utils/math/Math.sol": {
-      "lastModificationDate": 1739443515449,
-      "contentHash": "2b2665ae9bdb1af440658741a77fe213",
+      "lastModificationDate": 1739453024535,
+      "contentHash": "fe63409d8a06818b926cf89e0ea88b1b",
       "sourceName": "@openzeppelin/contracts/utils/math/Math.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -636,20 +561,17 @@
           }
         }
       },
-      "imports": [
-        "../Panic.sol",
-        "./SafeCast.sol"
-      ],
+      "imports": [],
       "versionPragmas": [
-        "^0.8.20"
+        "^0.8.0"
       ],
       "artifacts": [
         "Math"
       ]
     },
     "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/utils/math/SafeCast.sol": {
-      "lastModificationDate": 1739443515449,
-      "contentHash": "2adca1150f58fc6f3d1f0a0f22ee7cca",
+      "lastModificationDate": 1739453024538,
+      "contentHash": "67cf2dfe1d1c22b4ea7f242e8a17f431",
       "sourceName": "@openzeppelin/contracts/utils/math/SafeCast.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -677,89 +599,15 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.8.20"
+        "^0.8.0"
       ],
       "artifacts": [
         "SafeCast"
       ]
     },
-    "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/utils/Panic.sol": {
-      "lastModificationDate": 1739443515432,
-      "contentHash": "2133dc13536b4a6a98131e431fac59e1",
-      "sourceName": "@openzeppelin/contracts/utils/Panic.sol",
-      "solcConfig": {
-        "version": "0.8.28",
-        "settings": {
-          "evmVersion": "paris",
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "Panic"
-      ]
-    },
-    "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/interfaces/draft-IERC6093.sol": {
-      "lastModificationDate": 1739443515432,
-      "contentHash": "267d92fe4de67b1bdb3302c08f387dbf",
-      "sourceName": "@openzeppelin/contracts/interfaces/draft-IERC6093.sol",
-      "solcConfig": {
-        "version": "0.8.28",
-        "settings": {
-          "evmVersion": "paris",
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "IERC1155Errors",
-        "IERC20Errors",
-        "IERC721Errors"
-      ]
-    },
     "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
-      "lastModificationDate": 1739443515449,
-      "contentHash": "8f19f64d2adadf448840908bbaf431c8",
+      "lastModificationDate": 1739453024530,
+      "contentHash": "df36f7051335cd1e748b1b6463b7fdd3",
       "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -787,15 +635,15 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.8.20"
+        "^0.8.0"
       ],
       "artifacts": [
         "IERC20"
       ]
     },
     "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
-      "lastModificationDate": 1739443515449,
-      "contentHash": "794db3115001aa372c79326fcfd44b1f",
+      "lastModificationDate": 1739453024531,
+      "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
       "solcConfig": {
         "version": "0.8.28",
@@ -825,10 +673,280 @@
         "../IERC20.sol"
       ],
       "versionPragmas": [
-        "^0.8.20"
+        "^0.8.0"
       ],
       "artifacts": [
         "IERC20Metadata"
+      ]
+    },
+    "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/token/ERC20/extensions/ERC20Votes.sol": {
+      "lastModificationDate": 1739453024520,
+      "contentHash": "c093956f6e012e5967f5377362a91c23",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/ERC20Votes.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC20Permit.sol",
+        "../../../interfaces/IERC5805.sol",
+        "../../../utils/math/Math.sol",
+        "../../../utils/math/SafeCast.sol",
+        "../../../utils/cryptography/ECDSA.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC20Votes"
+      ]
+    },
+    "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/governance/utils/Votes.sol": {
+      "lastModificationDate": 1739443515432,
+      "contentHash": "95aceafdc639babdd22576e5e3774d64",
+      "sourceName": "@openzeppelin/contracts/governance/utils/Votes.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../interfaces/IERC5805.sol",
+        "../../utils/Context.sol",
+        "../../utils/Nonces.sol",
+        "../../utils/cryptography/EIP712.sol",
+        "../../utils/structs/Checkpoints.sol",
+        "../../utils/math/SafeCast.sol",
+        "../../utils/cryptography/ECDSA.sol",
+        "../../utils/types/Time.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Votes"
+      ]
+    },
+    "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/interfaces/IERC5805.sol": {
+      "lastModificationDate": 1739453024532,
+      "contentHash": "78962c5ba0fec9f6cad8f71cf96ae30b",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC5805.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../governance/utils/IVotes.sol",
+        "./IERC6372.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC5805"
+      ]
+    },
+    "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/governance/utils/IVotes.sol": {
+      "lastModificationDate": 1739453024535,
+      "contentHash": "e2ea5c24dc3967534a8ac4df343668c2",
+      "sourceName": "@openzeppelin/contracts/governance/utils/IVotes.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IVotes"
+      ]
+    },
+    "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/interfaces/IERC6372.sol": {
+      "lastModificationDate": 1739453024532,
+      "contentHash": "f9153597c0095dfaa672b15968161166",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC6372.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC6372"
+      ]
+    },
+    "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/token/ERC20/extensions/draft-ERC20Permit.sol": {
+      "lastModificationDate": 1739453024515,
+      "contentHash": "0ebe4a60af340ba617d3fb68db43c990",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/draft-ERC20Permit.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC20Permit.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": []
+    },
+    "/home/vivek/Documents/Work/DAO/basic-DAO/node_modules/@openzeppelin/contracts/utils/Counters.sol": {
+      "lastModificationDate": 1739453024513,
+      "contentHash": "74654e3ae5d7f39555055dfe244dab7a",
+      "sourceName": "@openzeppelin/contracts/utils/Counters.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Counters"
       ]
     }
   }
