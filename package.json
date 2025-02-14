@@ -1,6 +1,20 @@
 {
   "devDependencies": {
-    "@openzeppelin/contracts": "^4.9.0",
-    "hardhat": "^2.22.18"
+    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers",
+    "@openzeppelin/contracts": "4.7.3",
+    "@types/node": "^22.13.4",
+    "ether": "^0.0.9",
+    "hardhat": "^2.22.18",
+    "hardhat-deploy": "^0.14.0",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts-upgradeable": "^5.2.0",
+    "@typechain/ethers-v5": "^11.1.2",
+    "@typechain/hardhat": "^9.1.0",
+    "@types/chai": "^5.0.1",
+    "all": "^0.0.0",
+    "ts-node": "^10.9.2",
+    "typechain": "^8.3.2"
   }
 }
