@@ -18,7 +18,7 @@ contract GovernorContract is Initializable, GovernorUpgradeable, GovernorSetting
         _disableInitializers();
     }
 
-    function initialize(IVotes _token, TimelockControllerUpgradeable _timelock, uint256 _votingDelay, uint256 _votingPeriod, uint256 _quorumPercentage)
+    function initialize(IVotes _token, TimelockControllerUpgradeable _timelock, uint48 _votingDelay, uint32 _votingPeriod, uint256 _quorumPercentage)
         initializer public
     {
         __Governor_init("GovernorContract");
