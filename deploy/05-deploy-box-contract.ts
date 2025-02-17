@@ -3,7 +3,7 @@ import { DeployFunction } from "hardhat-deploy/types";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 
 const deplyBoxContract:DeployFunction = async function(hre:HardhatRuntimeEnvironment){
-    const {deployments, network, getNamedAccounts} = hre;
+    const {getNamedAccounts, deployments} = hre;
     const {deploy} = deployments
     const { deployer } = await getNamedAccounts()
 
@@ -14,12 +14,10 @@ const deplyBoxContract:DeployFunction = async function(hre:HardhatRuntimeEnviron
         log: true
     })
 
-
     const timeLockContract = await ethers.getContract("TimeLock");
-    // const boxContract = await ethers.getContract("Box", box.address);
-    // const transferOwnerShipTx = await boxContract.transferOwnership(timeLockContract.address);
-    // await transferOwnerShipTx.wait(1);
-
+    const boxContract = await ethers.getContractAt("Box", box.address);
+    const transferOwnerShipTx = await boxContract.transferOwnership(timeLockContract.address);
+    await transferOwnerShipTx.wait(1);
 }
 
 export default deplyBoxContract
