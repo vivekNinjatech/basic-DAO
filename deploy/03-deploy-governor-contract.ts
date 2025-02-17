@@ -22,6 +22,9 @@ const deployGovernorContract: DeployFunction = async function (hre: HardhatRunti
             VOTING_PERIOD, 
             QUORUM_PERCENTAGE
         ],
+        log: true
     })
     log(`GovernorContract deployed to ${governorContract.address}`)
 }
+
+export default deployGovernorContract
